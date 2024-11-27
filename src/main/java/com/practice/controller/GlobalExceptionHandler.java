@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    // 全域EXCEPTION處理
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> handleException(Exception ex) {
-        return new ResponseEntity<>("An error occurred: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
-    }
+  // 全域EXCEPTION處理
+  @ExceptionHandler(Exception.class)
+  public ResponseEntity<String> handleException(Exception ex) {
+    return new ResponseEntity<>(
+        "An error occurred: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+  }
 }

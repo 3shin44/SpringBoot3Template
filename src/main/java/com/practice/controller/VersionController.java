@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class VersionController {
-    @Value("${project.name}")
-    private String projectName;
+  @Value("${project.name}")
+  private String projectName;
 
-    @Value("${project.version}")
-    private String version;
+  @Value("${project.version}")
+  private String version;
 
-    @GetMapping("/version")
-    public String getVersion(){
-        LoggerUtility.info("GET REQUEST: getVersion");
-        return projectName + " : " + version;
-    }
+  @GetMapping("/version")
+  public String getVersion() {
+    LoggerUtility.info("GET REQUEST: getVersion");
+    return projectName + " : " + version;
+  }
 }
